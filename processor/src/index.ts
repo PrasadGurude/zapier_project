@@ -6,8 +6,8 @@ const prisma = new PrismaClient();
 const TOPIC_NAME = 'zap-event'
 
 const kafka = new Kafka({
-    clientId: 'my-app',
-    brokers: ['kafka1:9092', 'kafka2:9092']
+    clientId: 'outbox-processor',
+    brokers: ['localhost:9092']
 })
 
 async function main() {
