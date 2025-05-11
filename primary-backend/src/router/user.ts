@@ -83,8 +83,6 @@ router.post("/signin", async (req: Request, res: Response): Promise<any> => {
 })
 
 router.get("/", authMiddleware, async (req:Request, res:Response): Promise<any> => {
-    // TODO: Fix the type
-    // @ts-ignore
     const id = req.id;
     const user = await prismaClient.user.findFirst({
         where: {
