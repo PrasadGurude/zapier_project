@@ -63,7 +63,6 @@ router.post("/", middleware_1.default, (req, res) => __awaiter(void 0, void 0, v
     });
 }));
 router.get("/", middleware_1.default, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    // @ts-ignore
     const id = req.id;
     const zaps = yield db_1.prismaClient.zap.findMany({
         where: {
@@ -87,7 +86,6 @@ router.get("/", middleware_1.default, (req, res) => __awaiter(void 0, void 0, vo
     });
 }));
 router.get("/:zapId", middleware_1.default, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    //@ts-ignore
     const id = req.id;
     const zapId = req.params.zapId;
     const zap = yield db_1.prismaClient.zap.findFirst({

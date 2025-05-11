@@ -58,7 +58,7 @@ router.post("/", authMiddleware, async (req, res): Promise<any> => {
 })
 
 router.get("/", authMiddleware, async (req, res): Promise<any> => {
-    // @ts-ignore
+
     const id = req.id;
     const zaps = await prismaClient.zap.findMany({
         where: {
@@ -84,7 +84,7 @@ router.get("/", authMiddleware, async (req, res): Promise<any> => {
 })
 
 router.get("/:zapId", authMiddleware, async (req, res): Promise<any> => {
-    //@ts-ignore
+    
     const id = req.id;
     const zapId = req.params.zapId;
 
