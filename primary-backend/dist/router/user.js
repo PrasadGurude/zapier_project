@@ -80,8 +80,6 @@ router.post("/signin", (req, res) => __awaiter(void 0, void 0, void 0, function*
     });
 }));
 router.get("/", middleware_1.default, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    // TODO: Fix the type
-    // @ts-ignore
     const id = req.id;
     const user = yield db_1.prismaClient.user.findFirst({
         where: {

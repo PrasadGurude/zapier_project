@@ -3,11 +3,13 @@ import {userRouter} from "./router/user"
 import { zapRouter } from "./router/zap";
 import { actionRouter } from "./router/action";
 import { triggerRouter } from "./router/trigger";
+import cors from "cors";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
+app.use(cors())
 
 app.use('/api/v1/user',userRouter)
 app.use('/api/v1/zap',zapRouter)
